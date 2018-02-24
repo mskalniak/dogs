@@ -1,0 +1,16 @@
+//Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+.App-intro {
+  color: blue;
+}
