@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+
+.search__label-container {
+  height: 20px;
+}
+
+.search__label--small {
+  font-size: 10px;
+  color: $dogs-gray;
+}
+
+.search__button {
+  margin-top: 9px;
+}
+
+.search__spinner {
+  margin-top: 11px;
+}

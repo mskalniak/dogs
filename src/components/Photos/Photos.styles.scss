@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.photo {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.no-photos {
+    color: $dogs-blue;
+    font-size: 26px;
+    font-weight: 600;
+}
