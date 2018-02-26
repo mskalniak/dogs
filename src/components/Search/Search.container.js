@@ -1,18 +1,20 @@
 import { connect } from 'react-redux';
-import { changeSearchTextAction, searchAction } from '../../actions/actions';
+import { changeSearchTextAction, searchAction, changeSearchInputFocusAction } from '../../actions/actions';
 import { SearchComponent } from './Search.component';
 
 const mapStateToProps = state => {
     return {
         searchText: state.searchText,
         isLoading: state.isLoading,
-        searchPerformed: state.searchPerformed
+        searchPerformed: state.searchPerformed,
+        searchInputFocus: state.searchInputFocus
     }
 }
 
 const mapDispatchToProps = {
     changeSearchTextAction,
-    searchAction
+    searchAction,
+    changeSearchInputFocusAction
 };
 
 export const Search = connect(mapStateToProps, mapDispatchToProps)(SearchComponent);

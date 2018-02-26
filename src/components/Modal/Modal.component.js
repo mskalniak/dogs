@@ -15,10 +15,12 @@ export class ModalComponent extends Component {
             <div>
                 { this.props.isOpen === true ? (
                     <div>
-                        <div className="cover"></div>
+                        <div className="cover" onClick={this.props.onClose}></div>
                         <div className="modal__window">
                             <h1><span className="modal__close" onClick={this.props.onClose}></span></h1>
-                            <img className="modal__photo" src={this.props.content}></img>
+                            <div className="modal__photo-container">
+                                <img className="modal__photo" src={this.props.content}></img>
+                            </div>
                         </div>
                     </div>
                 ) : '' }

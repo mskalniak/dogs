@@ -1,13 +1,41 @@
 @import '../../styles/variables.scss';
 
-.photo {
-    max-width: 200px;
-    max-height: 200px;
-    margin: 10px 0px;
-    cursor: pointer;
+.photos__container {
+    position: relative;
+    height: 600px;
 }
 
-.no-photos {
+.photos__info-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.photos__boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photos__box {
+    width: 220px;
+    height: 220px;
+}
+
+.photos__photo {
+    min-width: 220px;
+    margin: 10px 0px;
+    min-height: 220px;
+    cursor: pointer;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.photos__no-photos {
     color: $dogs-blue;
     font-size: 26px;
     font-weight: 600;

@@ -22,16 +22,18 @@ export class PhotosComponent extends Component {
             <div>
                 {
                     this.props.dogs.length === 0 && this.props.searchPerformed === true ? (
-                        <div className="row da-margin-top100 justify-content-center">
-                            { this.props.searchError ? (
-                                <div className="col-auto no-photos">Error! Please try again later {ReactEmoji.emojify(':( :( :(', { attributes: { width: '30px', height: '30px' } })}</div>
-                            ) : (
-                                <div className="col-auto no-photos">I didn't find any pictures {ReactEmoji.emojify(':(', { attributes: { width: '30px', height: '30px' } })}</div>
-                            ) }
+                        <div className="photos__container">
+                            <div className="row justify-content-center align-items-center photos__info-container">
+                                { this.props.searchError ? (
+                                    <div className="col-auto photos__no-photos error">Error! Please try again later {ReactEmoji.emojify(':( :( :(', { attributes: { width: '30px', height: '30px' } })}</div>
+                                ) : (
+                                    <div className="col-auto photos__no-photos">I didn't find any pictures {ReactEmoji.emojify(':(', { attributes: { width: '30px', height: '30px' } })}</div>
+                                ) }
+                            </div>
                         </div>
                     ) : (
-                            <div className="row da-margin-top40">
-                                {this.props.dogs.map((dog, index) => <div className="col-auto" key={index}><img className="photo" src={dog} onClick={(e) => this.currentPhoto$.next({dog}.dog)}></img></div>)}
+                            <div className="photos__boxes-container da-margin-top80">
+                                {this.props.dogs.map((dog, index) => <div className="photos__box" key={index}><img className="photos__photo" src={dog} onClick={(e) => this.currentPhoto$.next({dog}.dog)}></img></div>)}
                             </div>
                         )
                 }

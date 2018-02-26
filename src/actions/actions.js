@@ -3,6 +3,7 @@ export const CHANGE_SEARCH_TEXT_ACTION = 'CHANGE_SEARCH_TEXT_ACTION';
 export const SEARCH_SUCCESS_ACTION = 'SEARCH_SUCCESS_ACTION';
 export const SEARCH_FAILED_ACTION = 'SEARCH_FAILED_ACTION';
 export const CHANGE_CURRENT_PHOTO_ACTION = 'CHANGE_CURRENT_PHOTO_ACTION';
+export const CHANGE_SEARCH_INPUT_FOCUS_ACTION = 'CHANGE_SEARCH_INPUT_FOCUS_ACTION';
 
 export function searchAction(payload) {
     return {
@@ -35,6 +36,13 @@ export function searchFailedAction(payload) {
 export function changeCurrentPhotoAction(payload) {
     return {
         type: CHANGE_CURRENT_PHOTO_ACTION,
+        payload
+    }
+}
+
+export function changeSearchInputFocusAction(payload) {
+    return {
+        type: CHANGE_SEARCH_INPUT_FOCUS_ACTION,
         payload
     }
 }

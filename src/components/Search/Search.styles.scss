@@ -1,12 +1,35 @@
 @import '../../styles/variables.scss';
 
+.search__container--outer {
+  position: relative;
+  height: 600px;
+}
+
+.search__container--inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .search__label-container {
   height: 20px;
 }
 
 .search__label--small {
-  font-size: 10px;
+  font-size: 11px;
+  color: #707E90;
+  font-weight: 300;
+  transition: all 0.3s linear;
+}
+
+.search__label--big {
+  font-size: 20px;
   color: $dogs-gray;
+  top: 20px;
+  position: relative;
+  pointer-events: none;
 }
 
 .search__button {

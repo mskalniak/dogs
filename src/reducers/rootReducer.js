@@ -4,12 +4,14 @@ import {
     SEARCH_SUCCESS_ACTION,
     SEARCH_ACTION,
     SEARCH_FAILED_ACTION,
-    CHANGE_CURRENT_PHOTO_ACTION
+    CHANGE_CURRENT_PHOTO_ACTION,
+    CHANGE_SEARCH_INPUT_FOCUS_ACTION
 } from '../actions/actions';
 
 const initialState = {
     searchText: '',
     searchPerformed: false,
+    searchInputFocus: false,
     isLoading: false,
     searchError: false,
     dogs: [],
@@ -63,6 +65,11 @@ export function rootReducer(state = initialState, action) {
             return Object.assign({}, state, {
                 currentPhoto: action.payload,
                 isPhotoModalOpen: isModalOpen
+            })
+        }
+        case CHANGE_SEARCH_INPUT_FOCUS_ACTION: {
+            return Object.assign({}, state, {
+                searchInputFocus: action.payload
             })
         }
 
