@@ -34,7 +34,7 @@ export class SearchComponent extends Component {
                         id="search-input"
                         aria-describedby="Search input"
                         placeholder="Breed name"
-                        onKeyPress={(e) => e.key === 'Enter' ? this.search$.next(this.props.searchText) : null}
+                        onKeyPress={(e) => e.key === 'Enter' && this.props.searchText.length > 0 ? this.search$.next(this.props.searchText) : null}
                         onChange={(e) => this.currentInput$.next(e.target.value)}></input>
                 </div>
                 <div className="col-auto">

@@ -47829,7 +47829,7 @@ var SearchComponent = exports.SearchComponent = function (_Component) {
                         'aria-describedby': 'Search input',
                         placeholder: 'Breed name',
                         onKeyPress: function onKeyPress(e) {
-                            return e.key === 'Enter' ? _this3.search$.next(_this3.props.searchText) : null;
+                            return e.key === 'Enter' && _this3.props.searchText.length > 0 ? _this3.search$.next(_this3.props.searchText) : null;
                         },
                         onChange: function onChange(e) {
                             return _this3.currentInput$.next(e.target.value);
